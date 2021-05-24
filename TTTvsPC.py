@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 root= Tk()
-root.title("Tic Tac Toe !!       made by: (Naoufal aoufi) ")
+root.title("Tic Tac Toe !!       made by: (SwiftyGuy) ")
 #Button click
 
 def b_click(b):
@@ -21,7 +21,7 @@ def b_click(b):
     if count==9 and winning==0:
         messagebox.showinfo("Tic Tac Toe", "Oh no!\nIt's a DRAW!!")
         disable_all_buttons()
-
+#Main_game
 def Reset():
     global b1,b2,b3,b4,b5,b6,b7,b8,b9,T,winning,count,Move
     winning=0
@@ -47,6 +47,7 @@ def disable_all_buttons():
     for i in range(3):
         for j in range(3):
             T[i][j].config(state=DISABLED)
+#Pc_Playmoves
 def SecondSequence():
     global Move
     Move=0
@@ -111,7 +112,6 @@ def SecondSequence():
                 if S!=[]:
                     Move = random.choice(S)
                     Move["text"]="O" 
-#Computer move 
 def Pc_Move():
     global Move,count
     Move=0
